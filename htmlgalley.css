@@ -1,0 +1,143 @@
+
+* {
+margin-top: .75em; margin-bottom: 0;
+}
+div {margin:0; padding:0;}
+body {max-width: 65em;
+margin:auto;
+font: 1em/1.5em sans-serif;
+padding: 0 1rem;
+padding-bottom: 2rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+line-height: 1.25em;
+margin-top: 1em;
+}
+
+h1 + *, 
+h2 + *, 
+h3 + *, 
+h4 + *, 
+h5 + *, 
+h6 + * {
+margin-top: 0.25rem;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-top: 1rem;
+}
+
+p.logo {
+    position:relative;
+    margin:1rem 0;
+    padding:0;
+    height: 100px;
+}
+
+img[alt^="Professions & Professionalism"]{
+    visibility: hidden;
+    display:block;
+    height: 100%;
+    margin: 0;
+}
+
+img[alt^="Professions & Professionalism"]::after {
+    content:"";
+    visibility:visible;
+    display:block;
+    background-image: url(ppheaderimage.png), url(ppheaderimage_vertical_strip.png);
+    background-repeat: no-repeat, repeat;
+    background-position: center;
+    background-color: black;
+    position:absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;    
+}
+
+@media screen and (max-width: 485px) {
+    img[alt^="Professions & Professionalism"]::after {
+        background-image: url(ppheaderimage_narrow.png), url(ppheaderimage_vertical_strip.png);
+    }
+}
+
+.author {
+    color: #b91029;
+}
+
+.references {
+text-indent: -2em;
+margin:0;
+padding:0;
+list-style-type:none;
+}
+
+.references li {
+padding-left: 2em;
+}
+
+.references li:first-child {
+margin-top: .5rem;
+}
+
+.references a[href] {
+display:block;
+margin-top: 0;
+padding-left: 2em;
+}
+
+.metadata-group {
+margin: 2rem 0;
+padding: 1rem;
+background: #eee;
+}
+
+.front .metadata-group {
+display:flex;
+flex-flow: row wrap;
+padding:0;
+justify-content: center;
+margin: 1rem 0;
+font-size: .75em;
+}
+
+.front .metadata-group p {
+margin:0;
+white-space:pre;
+margin: .25rem 1.5rem;
+
+}
+
+.history {
+display: flex;
+justify-content: space-between;
+}
+
+.branding {
+font-size: .75em;
+background: #eee;
+padding: 1rem;
+
+}
+.branding p+p {margin-top: 0; 
+}
+
+.license {
+    position: relative;
+    margin-left: calc(88px + 1rem);
+}
+.license a{
+    position:absolute;
+    display: block;
+    left: calc(-88px - 1rem);
+    top: 50%;
+    margin:0;
+    padding:0;
+    transform: translate(0,-50%);
+}
+.license a img {
+    margin:0;
+}
